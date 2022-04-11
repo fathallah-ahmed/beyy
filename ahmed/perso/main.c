@@ -29,7 +29,7 @@ int main(int argc, char *argv[])
 	
 	SDL_Init(SDL_INIT_VIDEO);
 	
-	ecran=SDL_SetVideoMode(800,600,32,SDL_HWSURFACE | SDL_DOUBLEBUF);
+	ecran=SDL_SetVideoMode(600,800,32,SDL_HWSURFACE | SDL_DOUBLEBUF);
 	SDL_WM_SetCaption("l'bey",NULL);
 	
 	afficher_Background (background, ecran);
