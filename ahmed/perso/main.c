@@ -1,3 +1,13 @@
+/**
+* @file main.c
+* @brief Testing Program.
+* @author C Team
+* @version 0.1
+* @date Apr 01, 2015
+*
+* Testing program 
+*
+*/
 #include<stdio.h>
 #include"SDL/SDL.h"
 #include<SDL/SDL_image.h> 
