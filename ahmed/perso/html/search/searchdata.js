@@ -2,7 +2,7 @@ var indexSectionsWithContent =
 {
   0: "bmp",
   1: "bp",
-  2: "m"
+  2: "mp"
 };
 
 var indexSectionNames =

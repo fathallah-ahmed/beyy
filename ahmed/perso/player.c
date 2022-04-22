@@ -1,5 +1,5 @@
 /**
-* @file main.c
+* @file player.c
 * @brief Testing Program.
 * @author C Team
 * @version 0.1
@@ -24,7 +24,7 @@ void initPerso(Personne *p)
 	p->direction=1;
 	p->up=0;
 	p->frame=0;
-	p->vitesse=1;
+	p->vitesse=3;
 	p->jump=0;
 	
 	p->perso[0]=IMG_Load("perso0.bmp");
@@ -82,7 +82,7 @@ void initPerso(Personne *p)
 	SDL_SetColorKey(p->perso[17], SDL_SRCCOLORKEY,SDL_MapRGB(p->perso[17]->format, 255, 0,0));
 	
 	p->persoAbs.x=0;
-	p->persoAbs.y=400;
+	p->persoAbs.y=150;
 };
 
 void afficherPerso(Personne p, SDL_Surface *screen)
@@ -166,12 +166,13 @@ void saut(Personne *p, Personne p2, int dt, int player, SDL_Surface *ecran, Back
 	
 	for (i=0;i<dt;i++)
 		{
-			p->persoAbs.y--;
+			p->persoAbs.y=p->persoAbs.y-3;
 			posinit++;
 			
 			if (p->direction==0)
 			{
-				p->persoAbs.x++;
+				p->persoAbs.x=p->persoAbs.x+3;
+				SDL_Delay(10);
 				animerPerso(p, ecran);
 				afficher_Background (background, ecran);
 				afficherPerso(*p, ecran);
@@ -181,7 +182,8 @@ void saut(Personne *p, Personne p2, int dt, int player, SDL_Surface *ecran, Back
 			}
 			if (p->direction==1)
 			{
-				p->persoAbs.x--;
+				p->persoAbs.x=p->persoAbs.x-3;
+				SDL_Delay(10);
 				animerPerso(p, ecran);
 				afficher_Background (background, ecran);
 				afficherPerso(*p, ecran);
@@ -194,12 +196,13 @@ void saut(Personne *p, Personne p2, int dt, int player, SDL_Surface *ecran, Back
 		}
 	for (i=0;i<dt;i++)
 		{
-			p->persoAbs.y++;
+			p->persoAbs.y=p->persoAbs.y+3;
 			posinit++;
 			
 			if (p->direction==0)
 			{
-				p->persoAbs.x++;
+				p->persoAbs.x=p->persoAbs.x+3;
+				SDL_Delay(10);
 				animerPerso(p, ecran);
 				afficher_Background (background, ecran);
 				afficherPerso(*p, ecran);
@@ -209,7 +212,8 @@ void saut(Personne *p, Personne p2, int dt, int player, SDL_Surface *ecran, Back
 			}
 			if (p->direction==1)
 			{
-				p->persoAbs.x--;
+				p->persoAbs.x=p->persoAbs.x-3;
+				SDL_Delay(10);
 				animerPerso(p, ecran);
 				afficher_Background (background, ecran);
 				afficherPerso(*p, ecran);

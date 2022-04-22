@@ -1,5 +1,5 @@
 /**
-* @file main.c
+* @file perso.c
 * @brief Testing Program.
 * @author C Team
 * @version 0.1
@@ -35,11 +35,11 @@ int jeu()
 	background.posback.x=0;
 	background.posback.y=0;
 	
-	background.imageFond=IMG_Load("background.jpg");
+	background.imageFond=IMG_Load("background.png");
 	
 	SDL_Init(SDL_INIT_VIDEO);
 	
-	ecran=SDL_SetVideoMode(800,600,32,SDL_HWSURFACE | SDL_DOUBLEBUF);
+	ecran=SDL_SetVideoMode(800,291,32,SDL_HWSURFACE | SDL_DOUBLEBUF);
 	SDL_WM_SetCaption("l'bey",NULL);
 	
 	afficher_Background (background, ecran);
